@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Course List Schema",
+  "description": "Schema that describes complete course and section list of METU scraping",
+  "type": "object",
+  "properties": {
+    "date-time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Scrape date/ time"
+    },
+
+    "semester": {
+      "enum": ["fall", "spring", "summer"],
+      "description": "Semester for which the scraping is done"
+
+    },
+
+    "year": {
+      "type": "string",
+      "description": "School year for which the scraping is done (e.g. 2019-2020)"
+    },
+
+    "courses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Course"
+      }
+    }
+
+  },
+
+  "required": ["date-time", "semester", "year", "courses"],
+
+  "definitions": {
+    "Course": {
+      "type": "object",
+      "properties": {
+        "course-code": {
+          "type": "number",
+          "description": "METU Course code of the course (e.g. 5710229)"
+        },
+        "pretty-course-code": {
+          "type": "string",
+          "description": "Pretty course code of the course (e.g., CENG229)"
+        },
+        "course-name": {
+          "type": "string",
+          "description": "Name of the course (e.g. C PROGRAMMING)"
+        },
+        "campus": {
+          "enum": ["ankara", "ncc"],
+          "description": "Campus in which the course is offered (ankara or northern cyprus)"
+        },
+        "offering-department": {
+          "type": "string",
+          "description": "The pretty short name of the offering department (e.g. CENG)"
+        },
+        "credits": {
+          "type": "number",
+          "description": "METU credits of the corse"
+        },
+        "level": {
+          "type": "array",
+          "items": {
+            "enum": ["undergraduate", "masters", "phd"]
+          },
+          "uniqueItems": true,
+          "description": "The levels for which the courses is offered"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Section"
+          }
+        }
+      },
+      "required": ["course-code", "pretty-course-code", "course-name", "campus", "offering-department","credits", "level", "sections"]
+    },
+
+    "Section": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "number",
+          "description": "Section number which is unique within a course"
+        },
+        "instructors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "description": "Instructor names for the course"
+        },
+        "meetings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "day": {
+                "type": "string"
+              },
+              "start-time": {
+                "type": "string"
+              },
+              "end-time": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              }
+            },
+            "required": ["day", "start-time", "end-time"]
+          },
+          "uniqueItems": true,
+          "description": "Meetings for the class"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "given-department": {
+                "type": "string"
+              },
+              "surname-start": {
+                "type": "string"
+              },
+              "surname-end": {
+                "type": "string"
+              },
+              "min-gpa": {
+                "type": "number"
+              },
+              "max-gpa": {
+                "type": "number"
+              },
+              "min-year": {
+                "type": "number"
+              },
+              "max-year": {
+                "type": "number"
+              },
+              "start-grade": {
+                "type": "string"
+              },
+              "end-grade": {
+                "type": "string"
+              }
+            },
+            "required": ["given-department", "surname-start", "surname-end", "min-gpa", "max-gpa", "min-year", "max-year", "start-grade", "end-grade"]
+          }
+        }
+      },
+      "required": ["number", "instructors", "meetings", "constraints"]
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "date-time": "2019-09-08T03:22:06.047Z",
+  "semester": "fall",
+  "year": "2019-2020",
+  "courses": [
+    {
+      "course-code": 5710213,
+      "pretty-course-code": "CENG213",
+      "course-name": "DATA STRUCTURES",
+      "campus": "ankara",
+      "offering-department": "CENG",
+      "credits": 4.00,
+      "level": ["undergraduate"],
+      "sections": [
+        {
+          "number": 1,
+          "instructors": ["ÇİÇEKLİ FEHİME NİHAN", "STAFF"],
+          "meetings": [
+            {
+              "day": "tuesday",
+              "start-time": "15:40",
+              "end-time": "17:30",
+              "location": "BMB3"
+            },
+            {
+              "day": "friday",
+              "start-time": "10:40",
+              "end-time": "11:30",
+              "location": "BMB4"
+            }
+          ],
+          "constraints": [
+            {
+              "given-department": "CENG",
+              "surname-start": "AA",
+              "surname-end": "DO",
+              "min-gpa": 0.00,
+              "max-gpa": 4.00,
+              "min-year": 0,
+              "max-year": 95,
+              "start-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)",
+              "end-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "instructors": ["ERTEKİN BOLELLİ ŞEYDA", "STAFF"],
+          "meetings": [
+            {
+              "day": "monday",
+              "start-time": "13:40",
+              "end-time": "15:30",
+              "location": "BMB2"
+            },
+            {
+              "day": "wednesday",
+              "start-time": "11:40",
+              "end-time": "12:30",
+              "location": "BMB4"
+            }
+          ],
+          "constraints": [
+            {
+              "given-department": "CENG",
+              "surname-start": "DÖ",
+              "surname-end": "OZ",
+              "min-gpa": 0.00,
+              "max-gpa": 4.00,
+              "min-year": 0,
+              "max-year": 95,
+              "start-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)",
+              "end-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "instructors": ["SAHİLLİOĞLU YUSUF", "STAFF"],
+          "meetings": [
+            {
+              "day": "tuesday",
+              "start-time": "09:40",
+              "end-time": "10:30"
+            },
+            {
+              "day": "wednesday",
+              "start-time": "13:40",
+              "end-time": "15:30"
+            }
+          ],
+          "constraints": [
+            {
+              "given-department": "CENG",
+              "surname-start": "ÖA",
+              "surname-end": "ZZ",
+              "min-gpa": 0.00,
+              "max-gpa": 4.00,
+              "min-year": 0,
+              "max-year": 95,
+              "start-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)",
+              "end-grade": "Hic almayanlar veya Basarisizlar (FD ve alti)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course-code": 2400577,
+      "pretty-course-code": "HIST577",
+      "course-name": "HISTORY OF THE LATE OTTOMAN EMPIRE, 1878-1922",
+      "campus": "ankara",
+      "offering-department": "HIST",
+      "credits": 3.00,
+      "level": ["masters", "phd"],
+      "sections": [
+        {
+          "number": 1,
+          "instructors": ["ŞEKER NESİM", "STAFF"],
+          "meetings": [
+            {
+              "day": "friday",
+              "start-time": "13:40",
+              "end-time": "16:30",
+              "location": "B04"
+            }
+          ],
+          "constraints": [
+          ]
+        }
+      ]
+    }
+  ]
+}
